@@ -1,3 +1,5 @@
 env
 .idea
 file.txt
+__pycache__
+db.sqlite3
