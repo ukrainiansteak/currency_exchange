@@ -1,0 +1,28 @@
+{% extends '_base.html' %}
+    {% block title %}
+        <title>Exchange rate</title>
+    {% endblock %}
+
+{% block main %}
+
+<table class="table table-borderless table-hover">
+        <tr class="table-light">
+            <th>Currency</th>
+            <th>Buy</th>
+            <th>Sell</th>
+            <th>Source</th>
+            <th>Exchange Date</th>
+            <th></th>
+        </tr>
+    {% for currency in object_list %}
+        <tr>
+            <td>{{ currency.currency_type }}</td>
+            <td>{{ currency.buy }}</td>
+            <td>{{ currency.sell }}</td>
+            <td>{{ currency.source }}</td>
+            <td>{{ currency.exchange_date }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}
